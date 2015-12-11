@@ -5,8 +5,10 @@ const	staticCache	= require('koa-static-cache'),
 	favicon		= require('koa-favicon'),
 	router		= require('koa-router')(),
 	index		= require('./routes/index'),
-	path		= require('path'),
-    config      = require("./config");
+	path		= require('path');
+
+// wire in the scheduler
+require('./lib/schedule');
 
 var app = koa();
 app.use(bodyParser());
