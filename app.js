@@ -12,7 +12,7 @@ require('./lib/schedule');
 
 var app = koa();
 app.use(bodyParser());
-app.use(favicon(__dirname + '/public/favicon.ico'));
+app.use(favicon());
 app.use(staticCache(path.join(__dirname, 'public')));
 app.use(index.routes());
 
