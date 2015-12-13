@@ -16,10 +16,7 @@ app.use(favicon());
 app.use(staticCache(path.join(__dirname, 'public')));
 app.use(index.routes());
 
-// error handlers
-
 // development error handler
-// will print stacktrace
 router.get('*', function* pageNotFound(next) {
 	this.status = 404;
 	this.body = "404";
@@ -42,9 +39,9 @@ app.use(function *(next) {
   throw new Error('some error');
 });
 
-/*
- * middleware for connect and disconnect
-*/
+/**
+ * Socket.io
+ */
 app.io.use(function* (next) {
 	// on connect
 	console.log('somebody connected');
