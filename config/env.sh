@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-export HASH=
+export ID=
 export AUTHORIZATION=
 
-echo "Hash: " $HASH
+echo "ID: " $ID
 echo "Authorization: " $AUTHORIZATION
